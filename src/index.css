@@ -1,0 +1,23 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root { --brand-color: #FBBF24; }
+
+body { background-color: #18181b; color: white; font-family: 'Inter', sans-serif; }
+.font-display { font-family: 'Bebas Neue', cursive; }
+.glass { background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); }
+.gradient-gold { background: linear-gradient(135deg, var(--brand-color) 0%, color-mix(in srgb, var(--brand-color) 70%, black) 100%); }
+.fade-in { animation: fadeIn 0.3s ease-out; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background-color: transparent; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background-color: var(--brand-color); }
+.custom-scrollbar { scrollbar-width: thin; scrollbar-color: var(--brand-color) transparent; }
+
+/* Plain CSS — no @apply needed */
+.status-pending   { background: rgb(234 179 8 / 0.2);  color: #facc15; }
+.status-confirmed { background: rgb(59 130 246 / 0.2); color: #60a5fa; }
+.status-completed { background: rgb(34 197 94 / 0.2);  color: #4ade80; }
+.status-cancelled { background: rgb(239 68 68 / 0.2);  color: #f87171; }
